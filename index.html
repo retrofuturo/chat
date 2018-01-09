@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Chat app</title>
+	<!-- FONTAWESOME -->
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+
+	<!--Google fonts-->
+	<link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
+
+	<!-- Custom style -->
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+	<!-- HEADER START -->
+	<header id="header">
+		<div class="container d-flex align-items-center">
+			<div class="chat-room-btn-toggle">
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
+			<!-- / chat-room-btn-toggle -->
+			<div class="search-users">
+				<i class="fa fa-search" aria-hidden="true"></i>
+			</div>
+			<!-- / search-users -->
+			<div class="user-info d-flex">
+				<div class="user-ava">
+					<img src="img/photo1.png" alt="">
+				</div>
+				<!-- / user-ava -->
+				<div class="user-data">
+					<span class="user-name">Riko Sapto Dimo</span>
+					<span class="user-status">Available</span>
+					<div class="dropdown"></div>
+				</div>
+				<!-- / user-data -->
+			</div>
+			<!-- / user-info -->
+		</div>
+		<!-- / container -->
+	</header>
+	<!-- HEADER END -->
+
+	<!-- MAIN START-->
+	<main id="main">
+		<div class="container">
+			<div class="chat-container d-flex">
+				<aside class="chat-rooms-container">
+					<div class="chat-rooms-head d-flex align-items-center justify-content-between">
+						<h6>Chat</h6>
+						<button class="btn btn-default">new</button>
+					</div>
+					<!-- / chat-rooms-head-->
+					<div class="chat-rooms-list">
+						<div class="chat-room-item active d-flex align-items-center">
+							<div class="chat-room-user-ava">
+								<img src="img/chat-room-ava.png" alt="">
+								<span class="new-msg-count active">2</span>
+							</div>
+							<!-- / chat-room-user-ava -->
+							<div class="chat-room-user-info">
+								<span class="chat-room-user-name">Fikri Ruslandi</span>
+
+								<div class="chat-room-last-msg d-flex justify-content-between">
+									<span class="last-msg">Ko, Kumaha Project anu eta Lorem ipsum dolor sit amet</span>
+									<span class="last-msg-time">1 min</span>
+								</div>
+								<!-- / chat-room-last-msg -->
+								<span class="chat-room-user-status online"></span>
+							</div>
+							<!-- / chat-room-user-info -->
+						</div>
+						<!-- / chat-room-item -->
+					</div>
+					<!-- / chat-rooms-list -->
+				</aside>
+				<!-- / chat-rooms-container -->
+				<div class="current-chat-room-container">
+					<div class="current-chat-room">
+						<div class="current-chat-room-head d-flex align-items-center">
+							<h5 class="current-chat-room-user-name">Abu Abdullah Nugraha</h5>
+							<span class="chat-room-user-status online"></span>
+						</div>
+						<div class="message-container">
+							<!-- One message to you -->
+							<div class="message to-you">
+								<img src="img/chat-room-ava.png" alt="">
+								<div class="message-text">
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+									A aliquid architecto autem blanditiis hic minus molestias omnis voluptate!
+									Atque error hic nemo nihil obcaecati officia quas quibusdam soluta? Inventore, rerum!
+								</div>
+							</div>
+							<!-- One message from you -->
+							<div class="message from-you">
+								<img src="img/chat-room-ava.png" alt="">
+								<div class="message-text">
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+									A aliquid architecto autem blanditiis hic minus molestias omnis voluptate!
+									Atque error hic nemo nihil obcaecati officia quas quibusdam soluta? Inventore, rerum!
+								</div>
+							</div>
+						</div>
+						<div class="message-form-container">
+							<div class="writing-status"></div>
+							<form name="message-form">
+								<input type="text" name="message" placeholder="Type your message...">
+								<button type="submit" class="send-btn"><i class="fa fa-paper-plane"></i></button>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- / chat-container -->
+		</div>
+		<!-- / container -->
+	</main>
+	<!-- MAIN END-->
+
+	<!-- MODAL -->
+	<div class="modal show" id="enter-modal">
+		<h6 class="modal-title">Пожалуйста, введите свои данные</h6>
+		<form name="enter-form">
+			<input type="text" name="name" class="form-control" placeholder="Name">
+			<input type="text" name="email" class="form-control" placeholder="Email">
+			<button type="submit" class="btn btn-default">Войти</button>
+		</form>
+	</div>
+
+	<div class="overlay show"></div>
+
+	<!-- Loader -->
+
+	<div id="loading">
+		<div id="loading-center">
+			<div id="loading-center-absolute">
+				<div class="object" id="object_one"></div>
+				<div class="object" id="object_two"></div>
+				<div class="object" id="object_three"></div>
+				<div class="object" id="object_four"></div>
+				<div class="object" id="object_five"></div>
+				<div class="object" id="object_six"></div>
+				<div class="object" id="object_seven"></div>
+				<div class="object" id="object_eight"></div>
+				<div class="object" id="object_nine"></div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Promises Polyfill -->
+	<script src="js/Promise.js"></script>
+
+	<!-- Socket io -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.4/socket.io.js"></script>
+
+	<!-- Modules -->
+	<script src="js/modules.min.js"></script>
+
+	<!-- App -->
+	<script src="js/app.js"></script>
+
+</body>
+</html>
